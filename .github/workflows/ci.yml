@@ -19,3 +19,4 @@ jobs:
           repository: 'gflags/gflags'
           path: gflags
       - run: build-glog.sh
+        working-directory: '/home/runner/work/build-glog-for-android/build-glog-for-android'
