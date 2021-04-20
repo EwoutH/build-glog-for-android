@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 6 * * 1' # Run every Monday at 06:00 UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          repository: 'google/glog'
+          path: glog
+      - uses: actions/checkout@v2
+        with:
+          repository: 'gflags/gflags'
+          path: gflags
+      - run: build-glog.sh
