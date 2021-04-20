@@ -18,5 +18,7 @@ jobs:
         with:
           repository: 'gflags/gflags'
           path: gflags
-      - run: sudo ./build-glog.sh
-        working-directory: '/home/runner/work/build-glog-for-android/build-glog-for-android'
+      - working-directory: '/home/runner/work/build-glog-for-android/build-glog-for-android'
+        run: |
+          chmod +x build-glog.sh
+          ./build-glog.sh
