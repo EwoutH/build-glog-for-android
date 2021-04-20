@@ -18,6 +18,7 @@ jobs:
         with:
           repository: 'gflags/gflags'
           path: gflags
+      - run: echo "ANDROID_NDK_HOME=$ANDROID_NDK_LATEST_HOME" >> $GITHUB_ENV
       - working-directory: '/home/runner/work/build-glog-for-android/build-glog-for-android'
         run: |
           chmod +x build-glog.sh
